@@ -5,6 +5,11 @@ print('-=-' * 24)
 jogar = str(input('Você quer jogar ? Digite "S" para Sim, e "N" para Não: ')).upper()
 if jogar == 'N':
     print('O jogo está finalizado.')
+elif jogar == 'S':
+    print('VAMOS COMEÇAR !')
+else:
+    print('Desculpe, Você deve escolher entre Sim ou Não para ter acesso ao jogo.')
+    print('Infelizmente o jogo será finalizado. Reinicie o jogo e tente novamente.')
 while jogar == 'S':
     escolha = str(input('\033[1:34m' + 'ESCOLHA PEDRA, PAPEL OU TESOURA: ' + '\033[m' + '\033[1:30m' + 'ou digite SAIR para encerrar o jogo:' + '\033[m')).upper()
     if escolha == 'PEDRA':
@@ -13,6 +18,12 @@ while jogar == 'S':
         num = 2
     elif escolha == 'TESOURA':
         num = 3
+    elif escolha != 'TESOURA':
+        num = 4
+    elif escolha != 'PAPEL':
+        num = 4
+    elif escolha != 'TESOURA':
+        num = 4
     elif escolha == 'sair' == 'SAIR' == 'Sair':
         break
         print('O jogo foi finalizado.')
@@ -36,4 +47,4 @@ while jogar == 'S':
     elif num == 3 and pc == 3:
         print('Você escolheu TESOURA e o Computador escolheu TESOURA. Vocês EMPATARAM!')
     else:
-        print('Escolha um número de 1 à 3 e tente novamente.')
+        print('Escolha entre PEDRA, PAPEL E TESOURA!')

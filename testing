@@ -1,0 +1,62 @@
+package aplication;
+
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("-=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=-");
+		System.out.println("Olá vamos jogar Pedra, Papel e Tesoura!");
+		System.out.println("-=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=-");
+
+		System.out.print("Você quer jogar? Digite '1' para Sim, e '2' para Não: ");
+		char jogar = sc.next().charAt(0);
+		int partidas;
+
+		if (jogar == '1') {
+			System.out.println("Vamos começar !");
+			System.out.println("O vencedor precisará ter quantas Vitórias para vencer o jogo? ");
+			partidas = sc.nextInt();
+			
+			int jogador1 = 0;
+			int jogador2 = 0;
+			String escolha;
+			
+			System.out.println("Escolha PEDRA, PAPEL ou TESOURA: ou Digite SAIR para encerrar o jogo.");
+			switch (escolha) {
+				case 1: 
+					escolha = "Pedra";
+					break;
+				case 2:
+					escolha = "Papel";
+					break;
+				case 3:
+					escolha = "Tesoura";
+					break;
+				case 4:
+					escolha = "Sair";
+					break;
+				default:
+					System.out.println("Infelizmente sua opção não foi válida");
+					break;
+			
+			
+			
+			}
+			
+		} else if (jogar == '1') {
+			System.out.println("O jogo está finalizado.");
+
+		} else {
+			System.out.println(
+					"Desculpe, você deve escolher entre '1' para Sim ou '2' para Não para ter acesso ao jogo.");
+			System.out.println("Infelizmente o jogo será finalizado. Reinicie o jogo e tente novamente.");
+		}
+
+		sc.close();
+	}
+
+}
